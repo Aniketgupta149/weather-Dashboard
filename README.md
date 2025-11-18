@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" /> </p>
 
 ## 📸 Project Preview
-<p align="center"> <img src="assets/preview.png" width="85%" alt="Weather Dashboard Preview"> </p>
+<p align="center"> <img src="/Assets/Banner.png" width="100%" alt="Weather Dashboard Preview"> </p>
 
 ## 🚀 Live Demo
 
