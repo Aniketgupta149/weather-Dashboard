@@ -1,6 +1,6 @@
 # 🌦️ Advanced Weather Dashboard — PRO Version (Streamlit + OpenWeatherMap API)
 
-## Badges
+## Badges.
 
 <p align="center"> <img src="https://img.shields.io/badge/Streamlit-1.31.0-FF4B4B?style=for-the-badge&logo=streamlit" /> 
   <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python" /> 
