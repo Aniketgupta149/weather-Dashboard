@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import requests
 import pandas as pd
@@ -171,7 +172,16 @@ h1, h2, h3 {{
 """, unsafe_allow_html=True)
 
 # ------------------ API KEY ------------------
-API_KEY = "67b92f0af5416edbfe58458f502b0a31"
+def get_secret(name):
+    try:
+        return st.secrets[name]
+    except Exception:
+        return os.getenv(name)
+
+API_KEY = get_secret("OPENWEATHER_API_KEY")
+if not API_KEY:
+    st.error("Missing OPENWEATHER_API_KEY. Add it to .streamlit/secrets.toml or set it as an environment variable.")
+    st.stop()
 
 # ------------------ WEATHER FUNCTION ------------------
 def current_weather(city):

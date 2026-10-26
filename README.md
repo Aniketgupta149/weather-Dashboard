@@ -1,171 +1,130 @@
-# 🌦️ Advanced Weather Dashboard — PRO Version (Streamlit + OpenWeatherMap API)
+# 🌦️ Advanced Weather Dashboard — PRO Version
 
-## Badges.
+<p align="center">
+  <img src="https://img.shields.io/badge/Streamlit-1.31.0-FF4B4B?style=for-the-badge&logo=streamlit" />
+  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python" />
+  <img src="https://img.shields.io/badge/OpenWeatherMap-API-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
+</p>
 
-<p align="center"> <img src="https://img.shields.io/badge/Streamlit-1.31.0-FF4B4B?style=for-the-badge&logo=streamlit" /> 
-  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python" /> 
-  <img src="https://img.shields.io/badge/OpenWeatherMap-API-orange?style=for-the-badge" /> 
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" /> </p>
+<p align="center">
+  <img src="Assets/Banner.png" width="100%" alt="Weather Dashboard Preview">
+</p>
 
-## 📸 Project Preview
-<p align="center"> <img src="/Assets/Banner.png" width="100%" alt="Weather Dashboard Preview"> </p>
-
-## 🚀 Live Demo
-
-👉 Hosted on Streamlit Cloud:
-
-<Strong>https://weather-dashboard149.streamlit.app/</Strong>
+<p align="center">
+  <a href="https://weather-dashboard149.streamlit.app/"><b>🚀 Live Demo on Streamlit Cloud</b></a>
+</p>
 
 ## 🌐 Project Overview
 
-This advanced weather dashboard provides real-time weather analytics using:
-
-✔ OpenWeatherMap API
-✔ Interactive Streamlit Web UI
-✔ Matplotlib + Seaborn Charts
-✔ Modern Card UI with Emojis
-✔ Donut Chart + Area Chart
-✔ Temperature Trends + Forecast Analytics
-
-Designed for a clean, responsive, and professional user experience.
+A real-time weather analytics dashboard built with **Streamlit** and the **OpenWeatherMap API**. Search any city to see current conditions, a 5-day forecast, a 24-hour trend, and analytics charts in a clean card-based UI.
 
 ## ⭐ Features
-## 🔍 Real-Time Weather Lookup
 
-Temperature (°C)
+### 🔍 Real-Time Weather Lookup
+- Temperature (°C) and "feels like"
+- Humidity, wind speed and pressure
+- Weather condition with emoji
 
-Feels Like
+### 📅 5-Day Forecast
+- Min/Max line charts
+- Daily summaries
+- CSV export
 
-Humidity
+### 🕒 Hourly Forecast
+- Area chart for the next 24 hours
 
-Wind Speed
+### 📊 Analytics Charts (Matplotlib + Seaborn)
 
-Pressure
+| Chart | Purpose |
+| --- | --- |
+| 📈 Area Chart | Hourly temperature trend |
+| 🍩 Donut Chart | Weather condition share |
+| 📉 Line Chart | Min/Max forecast graph |
+| 📊 Bar Charts | Humidity & wind comparison |
+| 🔥 Heatmap | Temperature–humidity–wind correlation |
 
-Weather Condition + Emoji
-
-## 📅 5-Day Forecast
-
-Min/Max line charts
-
-Daily summaries
-
-CSV export
-
-## 🕒 Hourly Forecast
-
-Area chart for next 24 hours
-
-Smooth & modern visualization
-
-📊 Analytics Charts (Matplotlib + Seaborn)
-Chart Type	Purpose
-📈 Area Chart	Hourly temperature trend
-🍩 Donut Chart	Weather condition share
-📉 Line Chart	Min/Max forecast graph
-📊 Bar Charts	Humidity & Wind comparison
-🔥 Heatmap	Temp-Humidity-Wind correlation
-🎨 Premium UI
-
-Custom CSS styling
-
-Card-based layout
-
-Dark/Light compatible
-
-Emoji-enhanced UI
+### 🎨 Premium UI
+- Custom CSS styling and card-based layout
+- Dark theme with emoji-enhanced UI
 
 ## 🧰 Tech Stack
-Technology	Purpose
-Python	Core backend
-Streamlit	Frontend UI
-OpenWeatherMap API	Weather data
-Pandas	Data handling
-NumPy	Numerical ops
-Matplotlib	Graphs
-Seaborn	Analytics visuals
+
+| Technology | Purpose |
+| --- | --- |
+| Python | Core backend |
+| Streamlit | Frontend UI |
+| OpenWeatherMap API | Weather data |
+| Pandas | Data handling |
+| NumPy | Numerical operations |
+| Matplotlib | Graphs |
+| Seaborn | Analytics visuals |
+
 ## 📂 Folder Structure
 
 ```txt
-weather-dashboard/
-│
+weather-Dashboard/
 ├── app.py
 ├── requirements.txt
 ├── README.md
-└── assets/
-     ├── preview.png
-     ├── screenshot1.png
-     ├── screenshot2.png
-
+├── .streamlit/
+│   └── secrets.toml.example
+└── Assets/
+    ├── Banner.png
+    └── meteorology.png
 ```
 
 ## 🔧 Installation & Setup
-1️⃣ Clone Repo
-```txt
-git clone https://github.com/aniketgupta149/weather-dashboard.git
-cd weather-dashboard
-```
-2️⃣ Install Packages
-```txt
-pip install -r requirements.txt
-```
-3️⃣ Add API Key
-```txt
-Take the key from OpenWeatherMap:
-https://openweathermap.org/api
 
-Replace in app.py:
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/Aniketgupta149/weather-Dashboard.git
+   cd weather-Dashboard
+   ```
 
-API_KEY = "YOUR_API_KEY"
+2. **Install packages**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4️⃣ Run App
+3. **Add your API key**
 
-streamlit run app.py
+   Get a free key from [OpenWeatherMap](https://openweathermap.org/api), copy `.streamlit/secrets.toml.example` to `.streamlit/secrets.toml`, and paste your key:
+   ```toml
+   OPENWEATHER_API_KEY = "your-api-key-here"
+   ```
+   You can also set `OPENWEATHER_API_KEY` as an environment variable.
 
+4. **Run the app**
+   ```bash
+   streamlit run app.py
+   ```
+   The app opens at `http://localhost:8501`.
 
-App opens at:
-
-http://localhost:8501
-```
 ## 🌐 Deploy on Streamlit Cloud
 
-Click below to deploy instantly 👇
+<a href="https://share.streamlit.io/"><img src="https://img.shields.io/badge/Deploy%20on%20Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit" /></a>
 
-<p align="left"> <a href="https://share.streamlit.io/"> <img src="https://img.shields.io/badge/Deploy%20on%20Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit" /> </a> </p>
-Steps:
+1. Push the code to GitHub
+2. Go to [share.streamlit.io](https://share.streamlit.io) and click **New app**
+3. Select the repo → branch → `app.py`
+4. Under **Advanced settings → Secrets**, add `OPENWEATHER_API_KEY = "your-key"`
+5. Deploy ✔
 
-Push code to GitHub
+## 💡 Future Enhancements
 
-Go to share.streamlit.io
-
-Click “New App”
-
-Select your repo → branch → app.py
-
-Deploy ✔
-
-## 💡 Future Enhancements (Optional)
-
-🌍 Multi-City Comparison
-
-🛰️ Satellite Weather Layer
-
-🗺️ Interactive Map (Folium / Mapbox)
-
-🎭 Dark Mode Toggle
-
-🫙 Local Data Caching
+- 🌍 Multi-city comparison *(available in [Meteorology-Analytics-Pro](https://github.com/Aniketgupta149/Meteorology-Analytics-Pro))*
+- 🛰️ Satellite weather layer
+- 🗺️ Interactive map (Folium / Mapbox)
+- 🫙 Local data caching
 
 ## 🧑‍💻 Author
 
-Aniket Gupta
-🌐 Portfolio: https://aniket-portfolio149.web.app
-
-🐙 GitHub: https://github.com/Aniketgupta149
-
-🔗 LinkedIn: https://linkedin.com/in/aniket-gupta-b44611261
+**Aniket Gupta**
+- 🌐 [Portfolio](https://aniket-portfolio149.web.app)
+- 🐙 [GitHub](https://github.com/Aniketgupta149)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/aniket-gupta-b44611261)
 
 ## ⭐ Support
 
-If you liked this project, be sure to give the repo a star ⭐!
-It motivates continued development 😊
+If you liked this project, give the repo a star ⭐. It motivates continued development 😊
